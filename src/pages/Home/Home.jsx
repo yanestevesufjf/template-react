@@ -1,6 +1,21 @@
+import { useEffect, useState } from "react"
 import CardInfo from "../../components/HomeComponents/CardInfo/CardInfo"
 import TableProducts from '../../components/HomeComponents/TableProducts/TableProducts'
+import { getProducts } from "../../services/produto"
+
 function Home() {
+
+    const [produtos, setProdutos] = useState([])
+
+    useEffect(() => {
+        async function getData() {
+            const data = await getProducts()
+            setProdutos(data)
+        }
+
+        getData()
+    }, [])
+
     return (
         <>
             {/* <h1>Home</h1> */}
@@ -13,15 +28,15 @@ function Home() {
 
             <div className="row mt-3">
                 <div className="col">
-                    <CardInfo titulo={'Lorem Ipsum'} valor={50} />
+                    <CardInfo titulo={'Produtos'} valor={produtos.length} />
                 </div>
 
                 <div className="col">
-                    <CardInfo titulo={'Lorem Ipsum 2'} valor={35} />
+                    <CardInfo titulo={'Valor Total'} valor={35} />
                 </div>
 
                 <div className="col">
-                    <CardInfo titulo={'Lorem Ipsum 3'} valor={60} />
+                    <CardInfo titulo={'Preço Médio'} valor={60} />
                 </div>
             </div>
 

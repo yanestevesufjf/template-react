@@ -10,11 +10,10 @@ import './App.css'
 import Home from './pages/Home/Home.jsx'
 import Sidebar from './components/OthersComponents/Sidebar/Sidebar'
 import Toolbar from './components/OthersComponents/Toolbar/Toolbar'
+
 function App() {
   return (
     <div className='container'>
-      
-
       <div className='row'>
         <div className='col-2'>
           <Sidebar />
