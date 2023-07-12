@@ -8,13 +8,29 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home/Home.jsx'
-
+import Sidebar from './components/OthersComponents/Sidebar/Sidebar'
+import Toolbar from './components/OthersComponents/Toolbar/Toolbar'
 function App() {
   return (
-    <div className='App'>
-      <Routes>
-        <Route path='/' element={<Home />}/>
-      </Routes>
+    <div className='container'>
+      
+
+      <div className='row'>
+        <div className='col-2'>
+          <Sidebar />
+        </div>
+
+        <div className='col-10'>
+          <Toolbar />
+          <Router>
+            <Routes>
+              <Route path='/' element={<Home />} />
+            </Routes>
+          </Router>
+        </div>
+
+      </div>
+
     </div>
   )
 }
