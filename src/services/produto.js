@@ -12,10 +12,18 @@ export async function getProduct(id) {
     return response
 }
 
-export async function calcularValorTotal() {    
-    const produtos = []
+export function calcularValorTotal(produtos) { 
+    let total = 0;
+
+    for (let i = 0; i < produtos.length; i++) {
+        total += produtos[i].preco
+    }
+    
+    return total
 }
 
-export async function calcularPrecoMedio() {    
-    const produtos = []
+export function calcularPrecoMedio(produtos) {    
+    const total = calcularValorTotal(produtos)
+
+    return total / produtos.length
 }
