@@ -27,3 +27,21 @@ export function calcularPrecoMedio(produtos) {
 
     return total / produtos.length
 }
+
+
+export async function criarProduto(formData) {
+    console.log(formData)
+    fetch(`${URL_API}/produtos`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    }).then((response) => response.json())
+        .then(result => {
+            console.log('Dado salvo. ', result)
+        }).catch(err => {
+            console.log('Erro ao salvar o dado.')
+            console.log(err)
+        })
+}

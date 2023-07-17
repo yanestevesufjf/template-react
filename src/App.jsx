@@ -14,12 +14,13 @@ import Cadastro from './pages/Cadastro/Cadastro'
 
 import Sidebar from './components/OthersComponents/Sidebar/Sidebar'
 import Toolbar from './components/OthersComponents/Toolbar/Toolbar'
+import CriarProduto from './pages/CriarProduto/CriarProduto'
 
 function App() {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-2 px-0'>
+        <div className='col-auto px-0'>
           <Sidebar />
         </div>
 
@@ -31,6 +32,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/produtos' element={<Produtos />} />
                 <Route path='/cadastro' element={<Cadastro />} />
+                <Route path='/criar-produto' element={<CriarProduto />} />
               </Routes>
             </Router>
           </main>

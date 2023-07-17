@@ -8,6 +8,7 @@ function Cadastro() {
     const [sobrenome, setSobrenome] = useState('')
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
+    const [confirmaSenha, setConfirmaSenha] = useState('')
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value)
@@ -25,15 +26,26 @@ function Cadastro() {
         setSenha(event.target.value)
     }
 
+    const handleConfirmaSenhaChange = (event) => {
+        setConfirmaSenha(event.target.value)
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault()        
+
+        if (senha !== confirmaSenha) {
+            alert('As senhas não batem')
+            return;
+        }
+
         setIsLoading(true)
 
         const formData = {            
             nome,
             sobrenome,
             email,
-            senha
+            senha,
+            confirmaSenha
         }
 
         await criarUsuario(formData)
@@ -65,6 +77,9 @@ function Cadastro() {
                     </div>
                     <div className="col">
                         <input type="password" value={senha} className="form-control" placeholder="Senha" aria-label="Senha" onChange={handleSenhaChange} />
+                    </div>
+                    <div className="col">
+                        <input type="password" value={confirmaSenha} className="form-control" placeholder="Confirme a senha" aria-label="Senha" onChange={handleConfirmaSenhaChange} />
                     </div>
                 </div>
 

@@ -1,34 +1,10 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "nome": "Jaleco Feminino",
-      "colecao": "2022",
-      "preco": 200
-    },
-    {
-      "id": 2,
-      "nome": "Scrub Feminino",
-      "colecao": "2024",
-      "preco": 120
-    },
-    {
-      "id": 3,
-      "nome": "Jaleco Arizona Feminino",
-      "colecao": "2023",
-      "preco": 230
-    },
-    {
-      "id": 4,
-      "nome": "Jaleco Oxford Feminino",
-      "colecao": "2022",
-      "preco": 150
-    },
-    {
-      "id": 5,
-      "nome": "Scrub Riley Feminino",
-      "colecao": "2023",
-      "preco": 185
+      "nome": "Camiseta",
+      "preco": "99,90",
+      "categoria": "1",
+      "id": 6
     }
   ],
   "usuarios": [
@@ -45,6 +21,16 @@
       "email": "yan.esteves@hotmail.com",
       "senha": "123456789005",
       "id": 2
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Vestuário"
+    },
+    {
+      "id": 2,
+      "nome": "Acessórios"
     }
   ]
 }
