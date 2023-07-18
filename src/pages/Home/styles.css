@@ -1,0 +1,9 @@
+.lista-pacientes {
+    display: flex;
+    flex-direction: row;
+}
+
+.lista-pacientes .card-paciente {
+    margin: 28px 20px;
+    margin-left: 0;
+}
