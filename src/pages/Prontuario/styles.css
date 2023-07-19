@@ -1,0 +1,18 @@
+.card-consulta {
+    background-color: rgb(199, 199, 199);
+    padding: 14px 28px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.card-consulta span {
+    display: block;
+}
+
+.f-14s {
+    font-size: 14px;
+}
+
+.btn-editar {
+    float: right;
+}

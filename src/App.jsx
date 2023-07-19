@@ -15,6 +15,8 @@ import Cadastro from './pages/Cadastro/Cadastro'
 import Sidebar from './components/OthersComponents/Sidebar/Sidebar'
 import Toolbar from './components/OthersComponents/Toolbar/Toolbar'
 import CriarProduto from './pages/CriarProduto/CriarProduto'
+import Prontuario from './pages/Prontuario/Prontuario'
+import ListaProntuario from './pages/ListaProntuario/ListaProntuario'
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
             <Router>
               <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/lista-prontuario' element={<ListaProntuario />} />
+                <Route path='/prontuario' element={<Prontuario />} />
                 <Route path='/produtos' element={<Produtos />} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/criar-produto' element={<CriarProduto />} />
