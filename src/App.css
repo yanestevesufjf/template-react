@@ -50,3 +50,7 @@
 .sidebar-min {
   width: 65px !important;
 }
+
+.bg-default {
+  background: rgb(227, 227, 227);
+}

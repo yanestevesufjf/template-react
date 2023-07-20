@@ -1,5 +1,5 @@
 // localhost:3000/pacientes?cpf=...
-const URL_API = 'localhost:3000'
+const URL_API = 'http://localhost:3000'
 
 // searchString = 106120
 // searchString = Yan

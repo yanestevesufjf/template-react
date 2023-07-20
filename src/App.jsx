@@ -17,6 +17,7 @@ import Toolbar from './components/OthersComponents/Toolbar/Toolbar'
 import CriarProduto from './pages/CriarProduto/CriarProduto'
 import Prontuario from './pages/Prontuario/Prontuario'
 import ListaProntuario from './pages/ListaProntuario/ListaProntuario'
+import CadastroExame from './pages/CadastroExame/CadastroExame'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
 
         <div className='col-10 px-0'>
           <Toolbar />
-          <main style={{ 'padding': '20px 100px'}}>
+          <main className="bg-default" style={{ 'padding': '20px 100px'}}>
             <Router>
               <Routes>
                 <Route path='/' element={<Home />} />
@@ -37,6 +38,7 @@ function App() {
                 <Route path='/produtos' element={<Produtos />} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/criar-produto' element={<CriarProduto />} />
+                <Route path='/cadastro-exame' element={<CadastroExame />} />
               </Routes>
             </Router>
           </main>

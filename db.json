@@ -32,5 +32,25 @@
       "id": 2,
       "nome": "Acessórios"
     }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "nome": "Cesar Abascal",
+      "plano": "Unimed",
+      "idade": 30
+    },
+    {
+      "id": 2,
+      "nome": "Daiane",
+      "plano": "Unimed",
+      "idade": 30
+    },
+    {
+      "id": 3,
+      "nome": "Andressa",
+      "plano": "Sem Plano",
+      "idade": 30
+    }
   ]
 }
