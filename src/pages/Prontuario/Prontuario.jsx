@@ -1,6 +1,35 @@
+import { useParams, useNavigate } from 'react-router-dom'
 import './styles.css'
+import { useEffect, useState } from 'react'
+import { getProntuario } from '../../services/prontuario'
 
 function Prontuario() {
+    const { id } = useParams()
+    const [prontuario, setProntuario] = useState()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        async function getData() {
+                const response = await getProntuario(id)
+                console.log('response: ', response)
+
+            setProntuario(response)
+        }
+
+        if (id) {
+            
+            getData()
+
+        }
+    }, [])
+
+    const editarConsulta = () => {
+        navigate(`/consulta/${prontuario.consulta.id}`)
+    }
+
+    const editarExame = () => {
+        navigate(`/exame/${prontuario.exame.id}`)
+    }
     /*
     Paciente Saul Souza
     Convênio: Plamev
@@ -9,8 +38,8 @@ function Prontuario() {
     return (
         <div>
             <div className="infos-prontuario text-start mb-4">
-                <h4>Paciente Saul Souza</h4>
-                <h6>Convênio: Plamev</h6>
+                <h4>Paciente {prontuario?.paciente?.nome}</h4>
+                <h6>Convênio: {prontuario?.paciente?.plano}</h6>
                 <h6>Alergias: Urticárias causadas por insetos</h6>
             </div>
 
@@ -23,7 +52,7 @@ function Prontuario() {
                             <span className='fw-light f-14 mb-3'>14:23 - 19/07/2023</span>
                         </div>
                         <div className='col'>
-                            <button type="button" className="btn btn-outline-secondary btn-editar">Editar</button>
+                            <button type="button" className="btn btn-outline-secondary btn-editar" onClick={editarConsulta}>Editar</button>
                         </div>
                     </div>
 
@@ -42,7 +71,7 @@ function Prontuario() {
                             <span className='fw-light f-14 mb-3'>16:23 - 19/07/2023</span>
                         </div>
                         <div className='col'>
-                            <button type="button" className="btn btn-outline-secondary btn-editar">Editar</button>
+                            <button type="button" className="btn btn-outline-secondary btn-editar" onClick={editarExame}>Editar</button>
                         </div>
                     </div>
 

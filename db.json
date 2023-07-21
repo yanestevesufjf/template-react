@@ -52,5 +52,29 @@
       "plano": "Sem Plano",
       "idade": 30
     }
+  ],
+  "exames": [
+    {
+      "id": 1,
+      "exame": "Lorem",
+      "data": "21/07/2023",
+      "paciente": 1,
+      "prontuario": 1
+    }
+  ],
+  "consultas": [
+    {
+      "id": 1,
+      "motivo": "Motivo da Consulta",
+      "data": "21/07/2023",
+      "paciente": 1,
+      "prontuario": 1
+    }    
+  ],
+  "prontuarios": [
+    {
+      "id": 1,
+      "paciente": 1
+    }
   ]
 }

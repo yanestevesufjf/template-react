@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import LinhaProntuarioComponent from "../../components/ListaComponents/LinhaComponent"
 
 function ListaProntuario() {
 
@@ -54,16 +55,13 @@ function ListaProntuario() {
             </div>
 
             <div className="row mt-3">
-                <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Registro</th>
-                            <th scope="col">Nome do Paciente</th>
-                            <th scope="col">Convênio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {prontuariosFiltrados.map(prontuario => {
+                <div className="col-2">REGISTRO</div>
+                <div className="col-6">NOME</div>
+                <div className="col-4">PLANO</div>
+            </div>
+
+            <div className="row">
+            {/* {prontuariosFiltrados.map(prontuario => {
                             return <tr key={prontuario.id}>
                                 <td>
                                     <Link to='/prontuario'>
@@ -73,10 +71,13 @@ function ListaProntuario() {
                                 <td>{prontuario.paciente}</td>
                                 <td>{prontuario.plano}</td>
                             </tr>
-                        })}
-                    </tbody>
-                </table>
+                        })} */}
+                {prontuariosFiltrados.map(prontuario => {
+                    return <LinhaProntuarioComponent key={prontuario.id} registro={prontuario.id} nome={prontuario.paciente} plano={prontuario.plano}/>
+                })}                
             </div>
+
+            
         </div>
     )
 }

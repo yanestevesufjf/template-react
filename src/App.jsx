@@ -35,6 +35,11 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/lista-prontuario' element={<ListaProntuario />} />
                 <Route path='/prontuario' element={<Prontuario />} />
+                <Route path='/prontuario/:id' element={<Prontuario />} />
+                
+                {/* <Route path='/exame/:id' element={<CadastroExame />} />
+                <Route path='/consulta/:id' element={<CadastroConsulta />} /> */}
+
                 <Route path='/produtos' element={<Produtos />} />
                 <Route path='/cadastro' element={<Cadastro />} />
                 <Route path='/criar-produto' element={<CriarProduto />} />
